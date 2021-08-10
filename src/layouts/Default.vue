@@ -21,6 +21,33 @@ query {
 }
 </static-query>
 
+<script>
+export default {
+  methods: {
+    checkColorScheme () {
+      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark')
+      } else {
+        document.documentElement.classList.remove('dark')
+      }
+    },
+    setColorScheme (mode) {
+      localStorage.theme = mode
+      this.checkColorScheme()
+    },
+    removeColorScheme () {
+      localStorage.removeItem('theme')
+      this.checkColorScheme()
+    }
+  },
+  mounted () {
+    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
+    this.checkColorScheme()
+  }
+}
+</script>
+
 <style>
 body {
   font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;

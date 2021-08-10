@@ -4,7 +4,10 @@ A Tailwind & Contentful powered Gridsome starter that is the base for most of my
 
 ## Features
 - Gridsome
-- Tailwind (With Forms & Dark Mode + optional color scheme toggle)
+- Tailwind w/ Plugins:
+    - Forms
+    - Dark Mode
+    - Typography
 - Contentful
 - SVG Icons Plugin
 - Google Analytics Plugin
@@ -18,7 +21,7 @@ A Tailwind & Contentful powered Gridsome starter that is the base for most of my
     - Markdown Rendering (COMING SOON)
     - Richtext Rendering (for Contentful)
     - Mobile Device Check (COMING SOON)
-    - SEO Defaults (COMING SOON)
+    - SEO Defaults with OpenGraph & Twitter Card meta (COMING SOON)
     - Filtering & Sorting (COMING SOON)
 <details>
     <summary>Custom Components</summary>
@@ -26,6 +29,7 @@ A Tailwind & Contentful powered Gridsome starter that is the base for most of my
     - Accordion (COMING SOON)
     - Button (COMING SOON)
     - Card (COMING SOON)
+    - Color Scheme Toggle (Dark mode, etc.) (COMING SOON)
     - Divider (HR) (COMING SOON)
     - Featured Video (Hero style Banner with Video Modal) (COMING SOON)
     - Flex Grid Components (Container, Row, Column) (COMING SOON)
@@ -36,7 +40,6 @@ A Tailwind & Contentful powered Gridsome starter that is the base for most of my
     - Modal (COMING SOON)
     - Photo (Lots of Options) (COMING SOON)
     - Pill (COMING SOON)
-    - Richtext Rendering (for Contentful)
     - Search Box (COMING SOON)
     - Toast (COMING SOON)
     - Top Navigation with Off-Canvas on Mobile (COMING SOON)
@@ -56,8 +59,8 @@ COMING SOON
 
 ### 2. Install this starter
 
-1. `gridsome create my-gridsome-wp-site https://github.com/jxlstudio/gridsome-starter-jxl`
-2. `cd my-gridsome-wp-site` to open folder
+1. `gridsome create my-gridsome-site https://github.com/jxlstudio/gridsome-starter-jxl`
+2. `cd my-gridsome-site` to open folder
 3. Set the Contentful, Google Analytics, Tailwind, and Flexsearch required env variables and options in `gridsome.config.js`
 5. `gridsome develop` to start local dev server at `http://localhost:8080`
 6. Happy coding 🎉🙌
@@ -98,4 +101,11 @@ Finally, you will need to update `tailwind.config.js`
 
 ```
 Will add this soon
+```
+
+## Required .env Variables 
+
+Create a .env file in your repo with the following variables filled in
+
+```
 ```
