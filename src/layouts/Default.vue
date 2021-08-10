@@ -11,6 +11,8 @@
 
     <b-footer/>
 
+    <ColorSchemeToggle/>
+
   </div>
 </template>
 
@@ -25,32 +27,12 @@ query {
 <script>
 import Navigation from '@/components/ui/Navigation.vue'
 import BFooter from '@/components/ui/BFooter.vue'
+import ColorSchemeToggle from '@/components/ui/ColorSchemeToggle.vue'
 export default {
   components: {
     Navigation,
-    BFooter
-  },
-  methods: {
-    checkColorScheme () {
-      // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-      if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark')
-      } else {
-        document.documentElement.classList.remove('dark')
-      }
-    },
-    setColorScheme (mode) {
-      localStorage.theme = mode
-      this.checkColorScheme()
-    },
-    removeColorScheme () {
-      localStorage.removeItem('theme')
-      this.checkColorScheme()
-    }
-  },
-  mounted () {
-    // On page load or when changing themes, best to add inline in `head` to avoid FOUC
-    this.checkColorScheme()
+    BFooter,
+    ColorSchemeToggle
   }
 }
 </script>
@@ -60,11 +42,11 @@ export default {
     scroll-behavior: smooth;
   }
   html.dark {
-    @apply bg-black;
+    @apply bg-gray-900;
   }
 
   body.dark {
-    @apply bg-black;
+    @apply bg-gray-900;
   }
 
   .fade-enter-active {

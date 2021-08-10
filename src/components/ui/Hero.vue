@@ -1,19 +1,19 @@
 <template>
     <div id="hero" :class="'bg-blue-600 dark:bg-dark-blue-600 text-white py-' + paddingY + ' bg-cover bg-no-repeat bg-center lazy'" :style="image">
-        <v-container>
-        <v-row :class="soloSizeAlign">
-            <v-column v-if="buttons === true" size="w-full md:w-1/2 lg:w-8/12 xl:w-8/12 py-6 md:py-2 self-center" id="hero-text">
+      <b-container>
+        <b-row :class="soloSizeAlign">
+            <b-column v-if="buttons === true" size="w-full md:w-1/2 lg:w-8/12 xl:w-8/12 py-6 md:py-2 self-center" id="hero-text">
                 <slot></slot>
-            </v-column>
-            <v-column v-if="buttons === true" size="w-full md:w-1/2 lg:w-4/12 xl:w-4/12" class="self-center" id="hero-buttons">
+            </b-column>
+            <b-column v-if="buttons === true" size="w-full md:w-1/2 lg:w-4/12 xl:w-4/12" class="self-center" id="hero-buttons">
               <p>Buttons Go Here</p>
-            </v-column>
+            </b-column>
 
-            <v-column v-else :size="soloSize + ' text-' + textAlign + ' py-6 md:py-2 self-center '" id="hero-text">
+            <b-column v-else :size="soloSize + ' text-' + textAlign + ' py-6 md:py-2 self-center '" id="hero-text">
                 <slot></slot>
-            </v-column>
-        </v-row>
-        </v-container>
+            </b-column>
+        </b-row>
+      </b-container>
     </div>
 </template>
 

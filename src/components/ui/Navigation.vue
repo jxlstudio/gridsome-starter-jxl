@@ -2,7 +2,7 @@
 <template>
   <header>
     <!-- NavBar -->
-    <nav class="flex flex-row flex-wrap items-center justify-between text-white bg-gray-900 px-4 py-6" aria-label="Top Navigation">
+    <nav class="flex flex-row flex-wrap items-center justify-between text-white bg-black px-4 py-6" aria-label="Top Navigation">
       <div class="left">
         <g-link :to="$static.metadata.siteUrl">
           {{ $static.metadata.siteName }}
