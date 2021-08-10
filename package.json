@@ -8,6 +8,9 @@
   },
   "dependencies": {
     "@fontsource/lato": "^4.5.0",
+    "@gridsome/plugin-google-analytics": "^0.1.2",
+    "@gridsome/plugin-sitemap": "^0.4.0",
+    "@gridsome/source-contentful": "^0.6.0",
     "@tailwindcss/forms": "^0.3.3",
     "@tailwindcss/typography": "^0.4.1",
     "dayjs": "^1.10.6",
@@ -21,6 +24,7 @@
     "gridsome-plugin-tailwindcss": "^4.1.1",
     "postcss": "7",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "vue-eslint-parser": "^7.10.0"
+    "vue-eslint-parser": "^7.10.0",
+    "vue-svg-loader": "^0.16.0"
   }
 }
