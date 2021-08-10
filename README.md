@@ -15,6 +15,7 @@ A Tailwind & Contentful powered Gridsome starter that is the base for most of my
 - ES Lint
 <details>
     <summary>Custom Components</summary>
+    
     - Accordion (COMING SOON)
     - Button (COMING SOON)
     - Card (COMING SOON)
