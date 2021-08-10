@@ -7,17 +7,17 @@
 module.exports = {
   siteName: 'Gridsome',
   plugins: [
-    {
-      use: '@gridsome/plugin-google-analytics',
-      options: {
-        id: process.env.GRIDSOME_GOOGLE_ANALYTICS_ID
-      }
-    },
+    // {
+    //   use: '@gridsome/plugin-google-analytics',
+    //   options: {
+    //     id: process.env.GRIDSOME_GOOGLE_ANALYTICS_ID
+    //   }
+    // },
     {
       use: '@gridsome/source-contentful',
       options: {
-        space: process.env.GRIDSOME_CTFL_SPACE_ID, // required
-        accessToken: process.env.GRIDSOME_API_KEY, // required
+        space: process.env.GRIDSOME_CONTENTFUL_SPACE_ID, // required
+        accessToken: process.env.GRIDSOME_CONTENTFUL_API_KEY, // required
         host: 'cdn.contentful.com',
         environment: 'master',
         typeName: 'Contentful'
@@ -50,6 +50,9 @@ module.exports = {
       }
     }
   ],
+  templates: {
+    ContentfulBasicPage: '/:slug'
+  },
   chainWebpack (config) {
     config.mode(process.env.GRIDSOME_WEBPACK_CONFIG_MODE)
 

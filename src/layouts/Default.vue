@@ -1,15 +1,16 @@
 <template>
   <div class="layout">
-    <header class="header">
-      <strong>
-        <g-link to="/">{{ $static.metadata.siteName }}</g-link>
-      </strong>
-      <nav class="nav">
-        <g-link class="nav__link" to="/">Home</g-link>
-        <g-link class="nav__link" to="/about/">About</g-link>
-      </nav>
-    </header>
-    <slot/>
+
+    <navigation/>
+    
+    <transition name="fade" appear>
+      <main>
+        <slot/>
+      </main>
+    </transition>
+
+    <b-footer/>
+
   </div>
 </template>
 
@@ -22,7 +23,13 @@ query {
 </static-query>
 
 <script>
+import Navigation from '@/components/ui/Navigation.vue'
+import BFooter from '@/components/ui/BFooter.vue'
 export default {
+  components: {
+    Navigation,
+    BFooter
+  },
   methods: {
     checkColorScheme () {
       // On page load or when changing themes, best to add inline in `head` to avoid FOUC
@@ -48,30 +55,38 @@ export default {
 }
 </script>
 
-<style>
-body {
-  font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  margin:0;
-  padding:0;
-  line-height: 1.5;
-}
+<style lang="postcss">
+  html {
+    scroll-behavior: smooth;
+  }
+  html.dark {
+    @apply bg-black;
+  }
 
-.layout {
-  max-width: 760px;
-  margin: 0 auto;
-  padding-left: 20px;
-  padding-right: 20px;
-}
+  body.dark {
+    @apply bg-black;
+  }
 
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-  height: 80px;
-}
+  .fade-enter-active {
+    transition: opacity 0.5s ease;
+  }
 
-.nav__link {
-  margin-left: 20px;
-}
+  .fade-enter {
+    opacity: 0;
+  }
+
+  .fade-leave-active {
+    transition: opacity 0.5s ease;
+  }
+
+  .fade-leave {
+    opacity: 0;
+  }
+  p > strong {
+      font-weight: 900;
+  }
+  iframe, .ly-iframe {
+    max-width: 100%;
+    max-height: 90vh;
+  }
 </style>
