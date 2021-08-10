@@ -13,9 +13,16 @@ A Tailwind & Contentful powered Gridsome starter that is the base for most of my
 - Day.js (for date/time formatting)
 - Lato Typeface
 - ES Lint
+- Custom Mixins
+    - Text Formatting (COMING SOON)
+    - Markdown Rendering (COMING SOON)
+    - Richtext Rendering (for Contentful)
+    - Mobile Device Check (COMING SOON)
+    - SEO Defaults (COMING SOON)
+    - Filtering & Sorting (COMING SOON)
 <details>
     <summary>Custom Components</summary>
-    
+
     - Accordion (COMING SOON)
     - Button (COMING SOON)
     - Card (COMING SOON)
@@ -28,8 +35,6 @@ A Tailwind & Contentful powered Gridsome starter that is the base for most of my
     - Form Inputs (COMING SOON)
     - Hero (with options for background-image, image overlay, buttons, etc.) (COMING SOON)
     - Loading (COMING SOON)
-    - Markdown Rendering
-    - Mobile Device Check
     - Modal (COMING SOON)
     - Photo (Lots of Options) (COMING SOON)
     - Pill (COMING SOON)
